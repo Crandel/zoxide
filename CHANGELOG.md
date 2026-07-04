@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `import` now skips directories matching `$_ZO_EXCLUDE_DIRS`.
 - POSIX: support for non-Cygwin Windows environments (e.g. Busybox).
 - Fish: Space-Tab completions now display and run the selected command.
+- Bash/POSIX: `z` now honors `$CDPATH`.
 
 ### Changed
 
@@ -24,7 +25,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Bash/Fish/POSIX/Zsh: resolve symlinks on Windows.
+- Bash/POSIX: `z` now handles relative paths through symlinked directories.
+- Bash/Fish/POSIX/Zsh: `_ZO_RESOLVE_SYMLINKS` now works on Windows.
 - Bash: handle `$PROMPT_COMMAND` values ending in a semicolon.
 - PowerShell: navigate to home directory with `z` on drives that don't define `HOME`.
 - PowerShell: use fully qualified names when invoking cmdlets.
